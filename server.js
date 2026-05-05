@@ -75,7 +75,7 @@ async function resolveWithSteps(domain, type) {
     };
   }
 
-  // Step 2: Root server query (simulated)
+  // Step 2: Root server query 
   const rootServer = ROOT_SERVERS[Math.floor(Math.random() * ROOT_SERVERS.length)];
   const rootStart = Date.now();
   await new Promise(r => setTimeout(r, 20 + Math.random() * 30));

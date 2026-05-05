@@ -31,16 +31,28 @@ function renderHistory() {
 }
 
 function rerunQuery(idx) {
-  const h = queryHistory[idx];
-  // Switch to resolve tab and re-run
+  const h = queryHistory?.[idx];
+  if (!h) return; // safety check
+
+  // Switch to resolve tab
   const resolveTab = document.querySelector('.tab');
-  switchTab('resolve', resolveTab);
+  if (resolveTab) {
+    switchTab('resolve', resolveTab);
+  }
 
   setTimeout(() => {
     const domainEl = document.getElementById('domain-input');
     const typeEl   = document.getElementById('type-select');
-    if (domainEl) domainEl.value = h.domain;
-    if (typeEl)   typeEl.value   = h.type;
+
+    if (domainEl && h.domain !== undefined) {
+      domainEl.value = h.domain;
+    }
+
+    if (typeEl && h.type !== undefined) {
+      typeEl.value = h.type;
+    }
+
+    // Re-run query
     doResolve();
   }, 100);
 }
