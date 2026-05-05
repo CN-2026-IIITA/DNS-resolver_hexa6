@@ -1,4 +1,4 @@
-# DNS Resolver 
+# DNS Resolver
 
 > A full-featured DNS analysis and network diagnostic tool built with Node.js and Express.  
 > Designed as a Computer Networks project, it provides an interactive web interface to explore how DNS resolution works — step by step — alongside a rich suite of advanced domain intelligence tools.
@@ -29,21 +29,21 @@ Beyond basic resolution, the tool offers a comprehensive set of network utilitie
 
 ## Features
 
-| Feature | Description |
-|---|---|
-| **DNS Resolver** | Step-by-step iterative DNS resolution with Root → TLD → Authoritative server simulation |
-| **DNS Cache Viewer** | Inspect and clear the in-memory DNS cache with TTL countdown |
-| **Iterative vs Recursive Comparison** | Side-by-side comparison of both DNS resolution modes |
-| **Bulk Resolver** | Resolve up to 20 domains simultaneously with a chosen record type |
-| **DNS Propagation Checker** | Verify DNS propagation across multiple global resolvers |
-| **WHOIS / Domain Info** | Retrieve nameservers, IPv4/IPv6 records, MX, TXT, and SOA records |
-| **Port Scanner** | Scan common ports on a target host and report open/closed status |
-| **Health Check** | Check HTTP/HTTPS reachability and response details of a domain |
-| **Performance Benchmark** | Measure and compare DNS resolution times across multiple runs |
-| **Security Analyzer** | Check SPF, DMARC, DNSSEC, and other security-related DNS records |
-| **Geo Map** | Visualize the geographic location of resolved IP addresses |
-| **DNS History** | Record and query DNS lookup history stored in a persistent JSON file |
-| **Query History** | In-session browser history of past DNS queries |
+| Feature                               | Description                                                                             |
+| ------------------------------------- | --------------------------------------------------------------------------------------- |
+| **DNS Resolver**                      | Step-by-step iterative DNS resolution with Root → TLD → Authoritative server simulation |
+| **DNS Cache Viewer**                  | Inspect and clear the in-memory DNS cache with TTL countdown                            |
+| **Iterative vs Recursive Comparison** | Side-by-side comparison of both DNS resolution modes                                    |
+| **Bulk Resolver**                     | Resolve up to 20 domains simultaneously with a chosen record type                       |
+| **DNS Propagation Checker**           | Verify DNS propagation across multiple global resolvers                                 |
+| **WHOIS / Domain Info**               | Retrieve nameservers, IPv4/IPv6 records, MX, TXT, and SOA records                       |
+| **Port Scanner**                      | Scan common ports on a target host and report open/closed status                        |
+| **Health Check**                      | Check HTTP/HTTPS reachability and response details of a domain                          |
+| **Performance Benchmark**             | Measure and compare DNS resolution times across multiple runs                           |
+| **Security Analyzer**                 | Check SPF, DMARC, DNSSEC, and other security-related DNS records                        |
+| **Geo Map**                           | Visualize the geographic location of resolved IP addresses                              |
+| **DNS History**                       | Record and query DNS lookup history stored in a persistent JSON file                    |
+| **Query History**                     | In-session browser history of past DNS queries                                          |
 
 ---
 
@@ -166,17 +166,19 @@ All endpoints are served under `/api`. Responses are JSON.
 
 Performs a step-by-step iterative DNS resolution for a domain.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | The domain name to resolve (e.g., `google.com`) |
-| `type` | string | No | DNS record type. Default: `A`. Options: `A`, `AAAA`, `MX`, `TXT`, `NS`, `CNAME`, `SOA` |
+| Parameter | Type   | Required | Description                                                                            |
+| --------- | ------ | -------- | -------------------------------------------------------------------------------------- |
+| `domain`  | string | Yes      | The domain name to resolve (e.g., `google.com`)                                        |
+| `type`    | string | No       | DNS record type. Default: `A`. Options: `A`, `AAAA`, `MX`, `TXT`, `NS`, `CNAME`, `SOA` |
 
 **Example:**
+
 ```
 GET /api/resolve?domain=example.com&type=A
 ```
 
 **Response fields:**
+
 - `domain` — cleaned domain string
 - `queryType` — record type queried
 - `fromCache` — whether the result was served from cache
@@ -206,9 +208,9 @@ Clears the entire in-memory DNS cache.
 
 Compares iterative DNS resolution (simulated multi-step) against recursive resolution (via system resolver) for a given domain.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | Domain to compare |
+| Parameter | Type   | Required | Description       |
+| --------- | ------ | -------- | ----------------- |
+| `domain`  | string | Yes      | Domain to compare |
 
 ---
 
@@ -218,12 +220,13 @@ Resolves multiple domains in parallel.
 
 **Request body (JSON):**
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `domains` | string[] | Yes | Array of domain names (max 20) |
-| `type` | string | No | DNS record type. Default: `A` |
+| Field     | Type     | Required | Description                    |
+| --------- | -------- | -------- | ------------------------------ |
+| `domains` | string[] | Yes      | Array of domain names (max 20) |
+| `type`    | string   | No       | DNS record type. Default: `A`  |
 
 **Example:**
+
 ```json
 {
   "domains": ["google.com", "github.com", "openai.com"],
@@ -237,9 +240,9 @@ Resolves multiple domains in parallel.
 
 Checks DNS propagation for a domain across multiple global resolvers.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | Domain to check propagation for |
+| Parameter | Type   | Required | Description                     |
+| --------- | ------ | -------- | ------------------------------- |
+| `domain`  | string | Yes      | Domain to check propagation for |
 
 **Response includes:** per-resolver status, answer IPs, latency, and an overall `propagated` boolean.
 
@@ -249,9 +252,9 @@ Checks DNS propagation for a domain across multiple global resolvers.
 
 Returns comprehensive domain information including nameservers, IPv4/IPv6 addresses, MX records, TXT records, and SOA data.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | Domain to look up |
+| Parameter | Type   | Required | Description       |
+| --------- | ------ | -------- | ----------------- |
+| `domain`  | string | Yes      | Domain to look up |
 
 ---
 
@@ -259,9 +262,9 @@ Returns comprehensive domain information including nameservers, IPv4/IPv6 addres
 
 Scans a set of common ports on the specified host.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | Target hostname or IP to scan |
+| Parameter | Type   | Required | Description                   |
+| --------- | ------ | -------- | ----------------------------- |
+| `domain`  | string | Yes      | Target hostname or IP to scan |
 
 ---
 
@@ -269,9 +272,9 @@ Scans a set of common ports on the specified host.
 
 Checks the HTTP and HTTPS reachability of a domain, returning status codes and response metadata.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | Domain to health-check |
+| Parameter | Type   | Required | Description            |
+| --------- | ------ | -------- | ---------------------- |
+| `domain`  | string | Yes      | Domain to health-check |
 
 ---
 
@@ -279,9 +282,9 @@ Checks the HTTP and HTTPS reachability of a domain, returning status codes and r
 
 Runs multiple DNS resolution attempts and returns timing statistics (min, max, average latency).
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | Domain to benchmark |
+| Parameter | Type   | Required | Description         |
+| --------- | ------ | -------- | ------------------- |
+| `domain`  | string | Yes      | Domain to benchmark |
 
 ---
 
@@ -289,9 +292,9 @@ Runs multiple DNS resolution attempts and returns timing statistics (min, max, a
 
 Analyzes security-related DNS records including SPF, DMARC, DNSSEC indicators, and TXT record content.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | Domain to analyze |
+| Parameter | Type   | Required | Description       |
+| --------- | ------ | -------- | ----------------- |
+| `domain`  | string | Yes      | Domain to analyze |
 
 ---
 
@@ -299,9 +302,9 @@ Analyzes security-related DNS records including SPF, DMARC, DNSSEC indicators, a
 
 Resolves a domain and returns geographic location data for its IP addresses.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | Domain to geolocate |
+| Parameter | Type   | Required | Description         |
+| --------- | ------ | -------- | ------------------- |
+| `domain`  | string | Yes      | Domain to geolocate |
 
 ---
 
@@ -309,10 +312,10 @@ Resolves a domain and returns geographic location data for its IP addresses.
 
 Records a DNS query result to the persistent `dns_history.json` file.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | Yes | Domain that was resolved |
-| `type` | string | No | Record type. Default: `A` |
+| Parameter | Type   | Required | Description               |
+| --------- | ------ | -------- | ------------------------- |
+| `domain`  | string | Yes      | Domain that was resolved  |
+| `type`    | string | No       | Record type. Default: `A` |
 
 ---
 
@@ -320,9 +323,9 @@ Records a DNS query result to the persistent `dns_history.json` file.
 
 Retrieves previously recorded DNS history from the persistent JSON store.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `domain` | string | No | Filter history by domain |
+| Parameter | Type   | Required | Description              |
+| --------- | ------ | -------- | ------------------------ |
+| `domain`  | string | No       | Filter history by domain |
 
 ---
 
@@ -351,14 +354,14 @@ DNS lookup history is stored in `dns_history.json` in the project root. This fil
 
 ## Technology Stack
 
-| Layer | Technology |
-|---|---|
-| **Runtime** | Node.js |
-| **Web Framework** | Express 5 |
-| **DNS Resolution** | Node.js built-in `dns` module (`dns.promises`) |
-| **Networking** | Node.js built-in `net` module (TCP port scanning) |
-| **Frontend** | Vanilla HTML, CSS, JavaScript |
-| **Data Storage** | In-memory object (cache) + JSON file (history) |
+| Layer              | Technology                                        |
+| ------------------ | ------------------------------------------------- |
+| **Runtime**        | Node.js                                           |
+| **Web Framework**  | Express 5                                         |
+| **DNS Resolution** | Node.js built-in `dns` module (`dns.promises`)    |
+| **Networking**     | Node.js built-in `net` module (TCP port scanning) |
+| **Frontend**       | Vanilla HTML, CSS, JavaScript                     |
+| **Data Storage**   | In-memory object (cache) + JSON file (history)    |
 
 ---
 
