@@ -2,7 +2,7 @@
    JS/DNSHISTORY.JS — DNS Record History & Trend Analysis
    ============================================================ */
 'use strict';
-
+//dnshistory.js
 /* ── Timestamp normaliser ────────────────────────────────────
    Server may return timestamps as ms (number) or ISO string.
    Always normalise to milliseconds for Date arithmetic.

@@ -2,7 +2,7 @@
    JS/SECURITY.JS — DNS Security & Threat Detection
    ============================================================ */
 'use strict';
-
+//security.js
 async function runSecurityScan() {
   const domain = document.getElementById('sec-domain').value.trim();
   if (!domain) return;

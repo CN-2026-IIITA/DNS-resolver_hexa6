@@ -1,3 +1,7 @@
+/* ============================================================
+   JS/MAIN.JS — Tab switching, feature loader, cache count
+   ============================================================ */
+//main.js
 'use strict';
 
 const loadedFeatures = new Set();

@@ -3,7 +3,7 @@
    ============================================================ */
 
 'use strict';
-
+//cache.js
 async function loadCache() {
   const area = document.getElementById('cache-area');
   if (!area) return;

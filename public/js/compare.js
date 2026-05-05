@@ -3,7 +3,7 @@
    ============================================================ */
 
 'use strict';
-
+//compare.js
 async function doCompare() {
   const domain = document.getElementById('compare-input').value.trim();
   if (!domain) return;
