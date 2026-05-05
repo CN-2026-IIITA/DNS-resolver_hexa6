@@ -2,7 +2,7 @@
    JS/GEOMAP.JS — Global DNS Map Visualization (Fixed)
    ============================================================ */
 'use strict';
-
+//geomap.js
 async function runGeoMap() {
   const domain = document.getElementById('geo-domain').value.trim();
   if (!domain) return;

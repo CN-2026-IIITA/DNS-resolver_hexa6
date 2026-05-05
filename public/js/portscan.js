@@ -3,7 +3,7 @@
    ============================================================ */
 
 'use strict';
-
+//portscan.js
 async function doPortScan() {
   const domain = document.getElementById('port-input').value.trim();
   if (!domain) return;

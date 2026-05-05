@@ -3,7 +3,7 @@
    ============================================================ */
 
 'use strict';
-
+//whois.js
 async function doWhois() {
   const domain = document.getElementById('whois-input').value.trim();
   if (!domain) return;

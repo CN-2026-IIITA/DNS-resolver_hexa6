@@ -2,7 +2,7 @@
    JS/PERF.JS — DNS Performance Analytics Dashboard
    ============================================================ */
 'use strict';
-
+//perf.js
 async function runPerfTest() {
   const domain = document.getElementById('perf-domain').value.trim();
   if (!domain) return;

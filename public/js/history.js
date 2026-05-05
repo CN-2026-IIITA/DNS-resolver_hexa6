@@ -3,7 +3,7 @@
    ============================================================ */
 
 'use strict';
-
+//history.js
 const queryHistory = [];
 
 function addToHistory(entry) {

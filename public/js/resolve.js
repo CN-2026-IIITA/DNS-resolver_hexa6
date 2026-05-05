@@ -3,7 +3,7 @@
    ============================================================ */
 
 'use strict';
-
+//resolve.js
 async function doResolve() {
   const domain = document.getElementById('domain-input').value.trim();
   const type   = document.getElementById('type-select').value;

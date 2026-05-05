@@ -3,7 +3,7 @@
    ============================================================ */
 
 'use strict';
-
+//propoagtion.js
 async function doPropagation() {
   const domain = document.getElementById('prop-input').value.trim();
   if (!domain) return;
