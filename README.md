@@ -368,4 +368,4 @@ DNS lookup history is stored in `dns_history.json` in the project root. This fil
 - Port scanning uses raw TCP connections with a **3-second timeout** per port. Results indicate whether a port is `open` or `closed/filtered`.
 - DNS history is stored in plain JSON and is not encrypted. Do not record sensitive domains in shared environments.
 - The server is designed for **local/educational use**. It is not hardened for production deployment.
-- Fatima
+
