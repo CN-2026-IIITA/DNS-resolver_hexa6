@@ -369,3 +369,5 @@ DNS lookup history is stored in `dns_history.json` in the project root. This fil
 - DNS history is stored in plain JSON and is not encrypted. Do not record sensitive domains in shared environments.
 - The server is designed for **local/educational use**. It is not hardened for production deployment.
 - Fatima
+- ## Contributor Update
+README update by Amelia.
