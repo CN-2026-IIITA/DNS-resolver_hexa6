@@ -17,7 +17,9 @@ const ROOT_SERVERS = [
 
 // In-memory cache: { "domain|type": { data, expiresAt, ttl } }
 const dnsCache = {};
-
+function isValidDomain(domain) {
+  return /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(domain);
+}
 function getCacheKey(domain, type) {
   return `${domain.toLowerCase()}|${type}`;
 }
