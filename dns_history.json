@@ -1,0 +1,260 @@
+[
+  {
+    "domain": "netflix.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "54.155.246.232",
+        "ttl": 53
+      },
+      {
+        "value": "18.200.8.190",
+        "ttl": 53
+      },
+      {
+        "value": "54.73.148.110",
+        "ttl": 53
+      }
+    ],
+    "ttl": 53,
+    "ms": 109,
+    "timestamp": 1777965663595
+  },
+  {
+    "domain": "netflix.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "54.155.246.232",
+        "ttl": 30
+      },
+      {
+        "value": "18.200.8.190",
+        "ttl": 30
+      },
+      {
+        "value": "54.73.148.110",
+        "ttl": 30
+      }
+    ],
+    "ttl": 30,
+    "ms": 0,
+    "timestamp": 1777965686032
+  },
+  {
+    "domain": "netflix.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "54.155.246.232",
+        "ttl": 27
+      },
+      {
+        "value": "18.200.8.190",
+        "ttl": 27
+      },
+      {
+        "value": "54.73.148.110",
+        "ttl": 27
+      }
+    ],
+    "ttl": 27,
+    "ms": 0,
+    "timestamp": 1777965689248
+  },
+  {
+    "domain": "google.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "142.251.220.46",
+        "ttl": 63
+      }
+    ],
+    "ttl": 63,
+    "ms": 0,
+    "timestamp": 1777966053449
+  },
+  {
+    "domain": "nykaa.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "13.224.163.75",
+        "ttl": 60
+      },
+      {
+        "value": "13.224.163.105",
+        "ttl": 60
+      },
+      {
+        "value": "13.224.163.29",
+        "ttl": 60
+      },
+      {
+        "value": "13.224.163.129",
+        "ttl": 60
+      }
+    ],
+    "ttl": 60,
+    "ms": 169,
+    "timestamp": 1777966065626
+  },
+  {
+    "domain": "google.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "142.250.67.142",
+        "ttl": 200
+      }
+    ],
+    "ttl": 200,
+    "ms": 99,
+    "timestamp": 1777966185744
+  },
+  {
+    "domain": "google.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "142.250.67.142",
+        "ttl": 189
+      }
+    ],
+    "ttl": 189,
+    "ms": 0,
+    "timestamp": 1777966197572
+  },
+  {
+    "domain": "google.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "142.250.67.142",
+        "ttl": 188
+      }
+    ],
+    "ttl": 188,
+    "ms": 0,
+    "timestamp": 1777966198586
+  },
+  {
+    "domain": "google.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "142.250.67.142",
+        "ttl": 181
+      }
+    ],
+    "ttl": 181,
+    "ms": 0,
+    "timestamp": 1777966205599
+  },
+  {
+    "domain": "ajio.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "49.40.59.14",
+        "ttl": 285
+      }
+    ],
+    "ttl": 285,
+    "ms": 83,
+    "timestamp": 1777967052274
+  },
+  {
+    "domain": "ajio.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "49.40.59.14",
+        "ttl": 275
+      }
+    ],
+    "ttl": 275,
+    "ms": 1,
+    "timestamp": 1777967062154
+  },
+  {
+    "domain": "ajio.com",
+    "type": "A",
+    "answer": [
+      {
+        "value": "49.40.59.14",
+        "ttl": 273
+      }
+    ],
+    "ttl": 273,
+    "ms": 0,
+    "timestamp": 1777967064530
+  },
+  {
+    "domain": "ajio.com",
+    "type": "MX",
+    "answer": [
+      {
+        "value": "mx04.ajio.com:10",
+        "ttl": 300
+      },
+      {
+        "value": "mx05.ajio.com:10",
+        "ttl": 300
+      },
+      {
+        "value": "mx06.ajio.com:20",
+        "ttl": 300
+      },
+      {
+        "value": "au-mail.em.sdlproducts.com:30",
+        "ttl": 300
+      },
+      {
+        "value": "mx01.ajio.com:10",
+        "ttl": 300
+      },
+      {
+        "value": "mx03.ajio.com:10",
+        "ttl": 300
+      }
+    ],
+    "ttl": 300,
+    "ms": 164,
+    "timestamp": 1777967109928
+  },
+  {
+    "domain": "ajio.com",
+    "type": "MX",
+    "answer": [
+      {
+        "value": "mx04.ajio.com:10",
+        "ttl": 300
+      },
+      {
+        "value": "mx05.ajio.com:10",
+        "ttl": 300
+      },
+      {
+        "value": "mx06.ajio.com:20",
+        "ttl": 300
+      },
+      {
+        "value": "au-mail.em.sdlproducts.com:30",
+        "ttl": 300
+      },
+      {
+        "value": "mx01.ajio.com:10",
+        "ttl": 300
+      },
+      {
+        "value": "mx03.ajio.com:10",
+        "ttl": 300
+      }
+    ],
+    "ttl": 300,
+    "ms": 0,
+    "timestamp": 1777967162997
+  }
+]

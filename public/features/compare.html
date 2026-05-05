@@ -1,0 +1,25 @@
+<!-- ============================================================
+     FEATURES/COMPARE.HTML
+     ============================================================ -->
+<div id="tab-compare" class="tab-panel">
+  <div class="section-header">
+    <div class="section-title">Iterative vs Recursive</div>
+    <div class="section-subtitle">Compare both resolution modes side by side</div>
+    <div class="search-box" style="margin-bottom:0">
+      <div class="input-group">
+        <label>Domain to Compare</label>
+        <input type="text" id="compare-input" placeholder="e.g. amazon.com"
+               onkeydown="if(event.key==='Enter') doCompare()">
+      </div>
+      <button class="btn btn-primary" onclick="doCompare()">Compare →</button>
+    </div>
+  </div>
+
+  <div id="compare-area">
+    <div class="empty">
+      <div class="empty-icon">⇄</div>
+      <p>Enter a domain to compare iterative vs recursive resolution.<br>
+      See which is faster and how many hops each takes.</p>
+    </div>
+  </div>
+</div>

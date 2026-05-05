@@ -1,0 +1,58 @@
+/* ============================================================
+   FEATURES/WHOIS.CSS
+   ============================================================ */
+
+.whois-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.whois-card {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.whois-card-title {
+  font-size: 11px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.whois-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+
+.whois-row:last-child { border-bottom: none; }
+
+.whois-key { color: var(--text3); flex-shrink: 0; }
+.whois-val { color: var(--text); text-align: right; word-break: break-all; }
+.whois-val.green { color: var(--green); }
+.whois-val.amber { color: var(--amber); }
+.whois-val.red   { color: var(--red); }
+
+.whois-tag       { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 600; margin-left: 4px; }
+.whois-tag.pass  { background: rgba(0,255,157,0.12); color: var(--green); }
+.whois-tag.fail  { background: rgba(255,71,87,0.12); color: var(--red); }
+
+.whois-spf-raw {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.whois-spf-val {
+  font-size: 10px;
+  color: var(--text2);
+  word-break: break-all;
+}

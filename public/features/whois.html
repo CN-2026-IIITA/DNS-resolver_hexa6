@@ -1,0 +1,24 @@
+<!-- ============================================================
+     FEATURES/WHOIS.HTML
+     ============================================================ -->
+<div id="tab-whois" class="tab-panel">
+  <div class="section-header">
+    <div class="section-title">WHOIS / Domain Info</div>
+    <div class="section-subtitle">Inspect nameservers, mail setup, SOA records, and DNS security of a domain</div>
+    <div class="search-box" style="margin-bottom:0">
+      <div class="input-group">
+        <label>Domain</label>
+        <input type="text" id="whois-input" placeholder="e.g. stripe.com"
+               onkeydown="if(event.key==='Enter') doWhois()">
+      </div>
+      <button class="btn btn-primary" onclick="doWhois()">Lookup →</button>
+    </div>
+  </div>
+
+  <div id="whois-area">
+    <div class="empty">
+      <div class="empty-icon">🔍</div>
+      <p>Enter a domain to see its DNS registration info and mail security settings.</p>
+    </div>
+  </div>
+</div>

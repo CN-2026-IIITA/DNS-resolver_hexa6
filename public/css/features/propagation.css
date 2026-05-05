@@ -1,0 +1,52 @@
+/* ============================================================
+   FEATURES/PROPAGATION.CSS
+   ============================================================ */
+
+.prop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.prop-card {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  padding: 14px;
+  transition: border-color 0.2s;
+}
+
+.prop-card.resolved { border-color: rgba(0,255,157,0.3); }
+.prop-card.failed   { border-color: rgba(255,71,87,0.3); }
+
+.prop-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.prop-server  { font-size: 13px; font-weight: 600; color: var(--text); }
+.prop-ip      { font-size: 11px; color: var(--text3); margin-bottom: 8px; }
+.prop-answers { font-size: 12px; color: var(--green); line-height: 1.6; }
+.prop-ms      { font-size: 11px; color: var(--text3); margin-top: 6px; }
+
+.prop-badge         { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.prop-badge.ok      { background: rgba(0,255,157,0.12); color: var(--green); }
+.prop-badge.fail    { background: rgba(255,71,87,0.12); color: var(--red); }
+
+.prop-banner {
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prop-banner.propagated { background: rgba(0,255,157,0.08);  border: 1px solid rgba(0,255,157,0.3); color: var(--green); }
+.prop-banner.partial    { background: rgba(255,184,48,0.08);  border: 1px solid rgba(255,184,48,0.3); color: var(--amber); }

@@ -1,0 +1,21 @@
+<!-- ============================================================
+     FEATURES/GEOMAP.HTML — Global DNS Map Visualization
+     ============================================================ -->
+<div id="tab-geomap" class="tab-panel">
+  <div class="search-box">
+    <div class="input-group" style="flex:2">
+      <label>Domain to Map</label>
+      <input type="text" id="geo-domain" placeholder="e.g. google.com, netflix.com"
+             onkeydown="if(event.key==='Enter') runGeoMap()">
+    </div>
+    <button class="btn btn-primary" onclick="runGeoMap()">Map DNS →</button>
+  </div>
+
+  <div id="geo-result">
+    <div class="empty">
+      <div class="empty-icon">🗺</div>
+      <p>Geolocate resolved IP addresses and DNS infrastructure on a world map.<br>
+      Shows server locations, countries, ISPs, and nameserver distribution.</p>
+    </div>
+  </div>
+</div>

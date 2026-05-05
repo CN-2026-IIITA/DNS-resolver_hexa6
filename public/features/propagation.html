@@ -1,0 +1,24 @@
+<!-- ============================================================
+     FEATURES/PROPAGATION.HTML
+     ============================================================ -->
+<div id="tab-propagation" class="tab-panel">
+  <div class="section-header">
+    <div class="section-title">DNS Propagation Check</div>
+    <div class="section-subtitle">Check if a domain resolves consistently across major DNS servers globally</div>
+    <div class="search-box" style="margin-bottom:0">
+      <div class="input-group">
+        <label>Domain</label>
+        <input type="text" id="prop-input" placeholder="e.g. mynewsite.com"
+               onkeydown="if(event.key==='Enter') doPropagation()">
+      </div>
+      <button class="btn btn-primary" onclick="doPropagation()">Check →</button>
+    </div>
+  </div>
+
+  <div id="propagation-area">
+    <div class="empty">
+      <div class="empty-icon">🌍</div>
+      <p>Enter a domain to check propagation across DNS servers worldwide.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+/* ============================================================
+   FEATURES/BULK.CSS
+   ============================================================ */
+
+.bulk-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.bulk-domain {
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bulk-answer {
+  color: var(--green);
+  font-size: 11px;
+  flex: 2;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bulk-status              { font-size: 11px; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+.bulk-status.ok           { background: rgba(0,255,157,0.1);  color: var(--green); }
+.bulk-status.error        { background: rgba(255,71,87,0.1);  color: var(--red); }
+.bulk-status.cache        { background: rgba(0,212,255,0.1);  color: var(--accent); }
+
+.bulk-ms { font-size: 11px; color: var(--text3); white-space: nowrap; }
+
+.bulk-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

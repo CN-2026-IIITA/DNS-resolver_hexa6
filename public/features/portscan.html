@@ -1,0 +1,25 @@
+<!-- ============================================================
+     FEATURES/PORTSCAN.HTML
+     ============================================================ -->
+<div id="tab-portscan" class="tab-panel">
+  <div class="section-header">
+    <div class="section-title">Port Scanner</div>
+    <div class="section-subtitle">Check which common ports are open on a domain's resolved IP address</div>
+    <div class="search-box" style="margin-bottom:0">
+      <div class="input-group">
+        <label>Domain</label>
+        <input type="text" id="port-input" placeholder="e.g. apache.org"
+               onkeydown="if(event.key==='Enter') doPortScan()">
+      </div>
+      <button class="btn btn-primary" onclick="doPortScan()">Scan →</button>
+    </div>
+  </div>
+
+  <div id="port-area">
+    <div class="empty">
+      <div class="empty-icon">🔌</div>
+      <p>Enter a domain to scan its common ports.<br>
+      <small style="opacity:0.6">Scans: FTP, SSH, SMTP, DNS, HTTP, HTTPS, MySQL, Redis, and more.</small></p>
+    </div>
+  </div>
+</div>

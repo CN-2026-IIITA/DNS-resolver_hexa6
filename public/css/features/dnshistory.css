@@ -1,0 +1,187 @@
+/* ============================================================
+   FEATURES/DNSHISTORY.CSS — DNS Record History & Trends
+   ============================================================ */
+
+/* ── Summary Stats ── */
+.hist-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.hist-stat {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.hist-stat-num {
+  font-family: var(--sans);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.hist-stat-label { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── Timeline ── */
+.hist-timeline { margin-bottom: 24px; }
+
+.hist-timeline-title {
+  font-size: 11px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.hist-key-group {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.hist-key-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+}
+
+.hist-key-name { font-size: 12px; font-weight: 600; color: var(--text); }
+.hist-key-meta { font-size: 10px; color: var(--text3); }
+
+.hist-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.hist-entry:last-child { border-bottom: none; }
+
+.hist-entry-line {
+  position: absolute;
+  left: 22px;
+  top: 30px;
+  bottom: -1px;
+  width: 2px;
+  background: var(--border);
+}
+
+.hist-entry:last-child .hist-entry-line { display: none; }
+
+.hist-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-top: 4px;
+  flex-shrink: 0;
+  border: 2px solid var(--bg2);
+  z-index: 1;
+}
+
+.hist-dot.changed { background: var(--amber); box-shadow: 0 0 6px rgba(255,184,48,0.5); }
+.hist-dot.same    { background: var(--border2); }
+.hist-dot.first   { background: var(--green); box-shadow: 0 0 6px rgba(0,255,157,0.4); }
+
+.hist-entry-content { flex: 1; }
+
+.hist-entry-time {
+  font-size: 10px;
+  color: var(--text3);
+  margin-bottom: 3px;
+}
+
+.hist-entry-values { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.hist-val-chip {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text2);
+  font-family: var(--mono);
+}
+
+.hist-val-chip.new-val { border-color: var(--amber); color: var(--amber); }
+
+.hist-change-badge {
+  font-size: 9px;
+  background: rgba(255,184,48,0.15);
+  color: var(--amber);
+  border: 1px solid rgba(255,184,48,0.3);
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ── Trend chart ── */
+.hist-trend-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.hist-trend-title {
+  font-size: 11px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.hist-trend-svg { width: 100%; height: 120px; overflow: visible; }
+
+/* ── Table ── */
+.hist-table-wrap { overflow-x: auto; }
+
+.hist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.hist-table th {
+  text-align: left;
+  font-size: 10px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hist-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text2);
+  vertical-align: top;
+}
+
+.hist-table tr:last-child td { border-bottom: none; }
+.hist-table tr:hover td { background: var(--bg3); }
+
+.hist-type-chip {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(0,212,255,0.1);
+  color: var(--accent);
+}

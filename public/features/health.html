@@ -1,0 +1,24 @@
+<!-- ============================================================
+     FEATURES/HEALTH.HTML
+     ============================================================ -->
+<div id="tab-health" class="tab-panel">
+  <div class="section-header">
+    <div class="section-title">DNS Health Check</div>
+    <div class="section-subtitle">Audit a domain's DNS configuration — A records, SPF, DMARC, redundancy, and more</div>
+    <div class="search-box" style="margin-bottom:0">
+      <div class="input-group">
+        <label>Domain</label>
+        <input type="text" id="health-input" placeholder="e.g. yourdomain.com"
+               onkeydown="if(event.key==='Enter') doHealth()">
+      </div>
+      <button class="btn btn-primary" onclick="doHealth()">Audit →</button>
+    </div>
+  </div>
+
+  <div id="health-area">
+    <div class="empty">
+      <div class="empty-icon">❤️</div>
+      <p>Enter a domain to run a full DNS health audit.</p>
+    </div>
+  </div>
+</div>

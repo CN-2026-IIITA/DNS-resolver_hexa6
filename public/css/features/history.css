@@ -1,0 +1,24 @@
+/* ============================================================
+   FEATURES/HISTORY.CSS
+   ============================================================ */
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.history-item:hover { border-color: var(--accent); }
+.history-domain { font-size: 13px; font-weight: 500; color: var(--text); flex: 1; }
+.history-time   { font-size: 11px; color: var(--text3); }
+
+.history-cache       { font-size: 11px; padding: 2px 7px; border-radius: 4px; }
+.history-cache.hit   { background: rgba(0,255,157,0.1); color: var(--green); }
+.history-cache.miss  { background: rgba(0,212,255,0.1); color: var(--accent); }

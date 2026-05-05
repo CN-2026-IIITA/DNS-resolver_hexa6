@@ -1,0 +1,125 @@
+/* ============================================================
+   FEATURES/GEOMAP.CSS — Global DNS Map Visualization
+   ============================================================ */
+
+.geo-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+}
+
+@media (max-width: 800px) { .geo-layout { grid-template-columns: 1fr; } }
+
+/* ── World Map ── */
+.geo-map-wrap {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  min-height: 340px;
+}
+
+.geo-map-title {
+  font-size: 11px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px 16px 0;
+}
+
+#geo-map-svg {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+
+.geo-map-pin {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.geo-map-pin:hover { transform: scale(1.4); }
+
+.geo-map-pulse {
+  animation: geo-pulse 2s ease-in-out infinite;
+}
+
+@keyframes geo-pulse {
+  0%,100% { opacity: 1; r: 6; }
+  50%      { opacity: 0.4; r: 10; }
+}
+
+/* ── Sidebar info ── */
+.geo-sidebar { display: flex; flex-direction: column; gap: 14px; }
+
+.geo-section {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.geo-section-title {
+  font-size: 10px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.geo-ip-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.geo-ip-row:last-child { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+
+.geo-ip-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  margin-top: 4px; flex-shrink: 0;
+}
+
+.geo-ip-addr { font-size: 12px; font-family: var(--mono); color: var(--accent); margin-bottom: 2px; }
+.geo-ip-loc  { font-size: 11px; color: var(--text2); }
+.geo-ip-isp  { font-size: 10px; color: var(--text3); margin-top: 1px; }
+
+/* Country flags (emoji) */
+.geo-flag { font-size: 16px; margin-right: 4px; }
+
+/* ── NS map entries ── */
+.geo-ns-row {
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  background: var(--bg3);
+  border-radius: 6px;
+}
+
+.geo-ns-name { color: var(--text2); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.geo-ns-country { color: var(--text3); font-size: 10px; flex-shrink: 0; }
+
+/* Tooltip */
+.geo-tooltip {
+  position: absolute;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: var(--text);
+  pointer-events: none;
+  z-index: 10;
+  white-space: nowrap;
+  display: none;
+}

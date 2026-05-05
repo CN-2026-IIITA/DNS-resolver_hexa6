@@ -1,0 +1,37 @@
+<!-- ============================================================
+     FEATURES/BULK.HTML
+     ============================================================ -->
+<div id="tab-bulk" class="tab-panel">
+  <div class="section-header">
+    <div class="section-title">Bulk Resolver</div>
+    <div class="section-subtitle">Resolve up to 20 domains at once — one per line</div>
+    <div class="search-box" style="align-items:flex-start">
+      <div class="input-group" style="flex:2">
+        <label>Domains (one per line)</label>
+        <textarea id="bulk-input"
+          placeholder="google.com&#10;github.com&#10;cloudflare.com&#10;example.org"></textarea>
+      </div>
+      <div class="bulk-controls">
+        <div class="input-group" style="min-width:110px; flex:0">
+          <label>Record Type</label>
+          <select id="bulk-type-select">
+            <option value="A">A — IPv4</option>
+            <option value="AAAA">AAAA — IPv6</option>
+            <option value="MX">MX — Mail</option>
+            <option value="NS">NS — Nameserver</option>
+            <option value="TXT">TXT — Text</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" style="height:auto; padding:10px 24px"
+                onclick="doBulk()">Resolve All →</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="bulk-area">
+    <div class="empty">
+      <div class="empty-icon">⊞</div>
+      <p>Enter multiple domains above to resolve them all at once.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+/* ============================================================
+   FEATURES/RESOLVE.CSS
+   ============================================================ */
+
+.result-area { min-height: 200px; }
+
+.hint-bar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: var(--text3);
+}
+
+.hint { display: flex; align-items: center; gap: 6px; }
+.hint-dot { width: 8px; height: 8px; border-radius: 50%; }

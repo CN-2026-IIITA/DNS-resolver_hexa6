@@ -1,0 +1,36 @@
+/* ============================================================
+   FEATURES/PORTSCAN.CSS
+   ============================================================ */
+
+.port-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.port-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.2s;
+}
+
+.port-card.open   { border-color: rgba(0,255,157,0.4); background: rgba(0,255,157,0.04); }
+.port-card.closed { opacity: 0.55; }
+
+.port-num        { font-size: 18px; font-weight: 700; font-family: var(--sans); }
+.port-num.open   { color: var(--green); }
+.port-num.closed { color: var(--text3); }
+
+.port-name { font-size: 12px; font-weight: 600; color: var(--text); }
+.port-desc { font-size: 11px; color: var(--text3); }
+.port-ms   { font-size: 10px; color: var(--text3); }
+
+.port-dot        { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+.port-dot.open   { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.port-dot.closed { background: var(--text3); }

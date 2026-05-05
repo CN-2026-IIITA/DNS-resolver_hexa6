@@ -1,0 +1,21 @@
+<!-- ============================================================
+     FEATURES/SECURITY.HTML — DNS Security & Threat Detection
+     ============================================================ -->
+<div id="tab-security" class="tab-panel">
+  <div class="search-box">
+    <div class="input-group" style="flex:2">
+      <label>Domain to Analyze</label>
+      <input type="text" id="sec-domain" placeholder="e.g. suspicious-login.com, paypa1.com"
+             onkeydown="if(event.key==='Enter') runSecurityScan()">
+    </div>
+    <button class="btn btn-primary" onclick="runSecurityScan()">Scan Domain →</button>
+  </div>
+
+  <div id="sec-result">
+    <div class="empty">
+      <div class="empty-icon">🛡</div>
+      <p>Analyze domains for security threats, phishing patterns, and DNS anomalies.<br>
+      Detects spoofing indicators, suspicious patterns, and missing security records.</p>
+    </div>
+  </div>
+</div>

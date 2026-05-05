@@ -1,0 +1,21 @@
+<!-- ============================================================
+     FEATURES/PERF.HTML — DNS Performance Analytics Dashboard
+     ============================================================ -->
+<div id="tab-perf" class="tab-panel">
+  <div class="search-box">
+    <div class="input-group" style="flex:2">
+      <label>Domain to Benchmark</label>
+      <input type="text" id="perf-domain" placeholder="e.g. github.com, cloudflare.com"
+             onkeydown="if(event.key==='Enter') runPerfTest()">
+    </div>
+    <button class="btn btn-primary" onclick="runPerfTest()">Run Benchmark →</button>
+  </div>
+
+  <div id="perf-result">
+    <div class="empty">
+      <div class="empty-icon">⚡</div>
+      <p>Benchmark DNS response times across Google, Cloudflare, Quad9, and OpenDNS.<br>
+      Measures latency, reliability, and packet success rate with 5 samples per provider.</p>
+    </div>
+  </div>
+</div>

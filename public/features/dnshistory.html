@@ -1,0 +1,32 @@
+<!-- ============================================================
+     FEATURES/DNSHISTORY.HTML — DNS Record History & Trends
+     ============================================================ -->
+<div id="tab-dnshistory" class="tab-panel">
+  <div class="search-box">
+    <div class="input-group" style="flex:2">
+      <label>Domain to Track</label>
+      <input type="text" id="hist-domain" placeholder="e.g. google.com"
+             onkeydown="if(event.key==='Enter') snapshotDNS()">
+    </div>
+    <div class="input-group" style="flex:0.6; min-width:110px">
+      <label>Record Type</label>
+      <select id="hist-type">
+        <option value="A">A — IPv4</option>
+        <option value="AAAA">AAAA — IPv6</option>
+        <option value="MX">MX — Mail</option>
+        <option value="NS">NS — Nameserver</option>
+        <option value="TXT">TXT — Text</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" onclick="snapshotDNS()">Snapshot →</button>
+    <button class="btn btn-secondary" onclick="loadDNSHistory()">View History</button>
+  </div>
+
+  <div id="hist-result">
+    <div class="empty">
+      <div class="empty-icon">📈</div>
+      <p>Track DNS record changes over time. Take snapshots to record the current state,<br>
+      then view history to detect IP changes, TTL drift, and configuration shifts.</p>
+    </div>
+  </div>
+</div>

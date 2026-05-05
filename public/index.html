@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNS Resolver — CN Project</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Base styles (always loaded) -->
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">🌐</div>
+      DNS<span>Resolver</span>
+    </div>
+    <div class="status-bar">
+      <div class="status-dot"></div>
+      <span>SERVER ONLINE</span>
+      <span style="color:var(--border2)">|</span>
+      <span id="cache-count">0 cached</span>
+    </div>
+  </header>
+
+  <!-- Tab Bar -->
+  <div class="tabs">
+    <button class="tab active"  onclick="switchTab('resolve',     this)">⟩ Resolve</button>
+    <button class="tab"         onclick="switchTab('cache',       this)">⟩ Cache</button>
+    <button class="tab"         onclick="switchTab('compare',     this)">⟩ Compare</button>
+    <button class="tab"         onclick="switchTab('history',     this)">⟩ History</button>
+    <button class="tab"         onclick="switchTab('bulk',        this)">⟩ Bulk</button>
+    <button class="tab"         onclick="switchTab('propagation', this)">⟩ Propagation</button>
+    <button class="tab"         onclick="switchTab('whois',       this)">⟩ Whois</button>
+    <button class="tab"         onclick="switchTab('portscan',    this)">⟩ Port Scan</button>
+    <button class="tab"         onclick="switchTab('health',      this)">⟩ Health</button>
+    <button class="tab"         onclick="switchTab('perf',        this)">⚡ Perf</button>
+    <button class="tab"         onclick="switchTab('security',    this)">🛡 Security</button>
+    <button class="tab"         onclick="switchTab('geomap',      this)">🗺 Map</button>
+    <button class="tab"         onclick="switchTab('dnshistory',  this)">📈 Trends</button>
+  </div>
+
+  <!-- Tab panels are injected here by main.js -->
+  <div id="tab-container"></div>
+
+</div>
+
+<!-- JS modules: shared first, then features -->
+<script src="/js/main.js"></script>
+<script src="/js/history.js"></script>
+<script src="/js/resolve.js"></script>
+<script src="/js/cache.js"></script>
+<script src="/js/compare.js"></script>
+<script src="/js/bulk.js"></script>
+<script src="/js/propagation.js"></script>
+<script src="/js/whois.js"></script>
+<script src="/js/portscan.js"></script>
+<script src="/js/health.js"></script>
+<script src="/js/perf.js"></script>
+<script src="/js/security.js"></script>
+<script src="/js/geomap.js"></script>
+<script src="/js/dnshistory.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- ============================================================
+     FEATURES/RESOLVE.HTML
+     ============================================================ -->
+<div id="tab-resolve" class="tab-panel active">
+  <div class="search-box">
+    <div class="input-group" style="flex:2">
+      <label>Domain Name</label>
+      <input type="text" id="domain-input" placeholder="e.g. google.com, github.com"
+             onkeydown="if(event.key==='Enter') doResolve()">
+    </div>
+    <div class="input-group" style="flex:0.6; min-width:110px">
+      <label>Record Type</label>
+      <select id="type-select">
+        <option value="A">A — IPv4</option>
+        <option value="AAAA">AAAA — IPv6</option>
+        <option value="MX">MX — Mail</option>
+        <option value="CNAME">CNAME — Alias</option>
+        <option value="NS">NS — Nameserver</option>
+        <option value="TXT">TXT — Text</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" onclick="doResolve()">Resolve →</button>
+  </div>
+
+  <div class="hint-bar">
+    <div class="hint"><div class="hint-dot" style="background:var(--purple)"></div> Root Server</div>
+    <div class="hint"><div class="hint-dot" style="background:var(--amber)"></div> TLD Server</div>
+    <div class="hint"><div class="hint-dot" style="background:var(--green)"></div> Authoritative</div>
+    <div class="hint"><div class="hint-dot" style="background:var(--green); box-shadow:0 0 6px var(--green)"></div> Cache Hit</div>
+  </div>
+
+  <div id="result-area" class="result-area">
+    <div class="empty">
+      <div class="empty-icon">◎</div>
+      <p>Enter a domain name above to trace its DNS resolution path.<br>
+      Watch the query travel from Root → TLD → Authoritative nameserver.</p>
+    </div>
+  </div>
+</div>

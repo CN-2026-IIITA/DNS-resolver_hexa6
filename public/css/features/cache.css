@@ -1,0 +1,36 @@
+/* ============================================================
+   FEATURES/CACHE.CSS
+   ============================================================ */
+
+.cache-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+
+.cache-table th {
+  text-align: left;
+  padding: 8px 12px;
+  color: var(--text3);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--border);
+}
+
+.cache-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.cache-table tr:last-child td { border-bottom: none; }
+.cache-table tr:hover td { background: var(--bg3); }
+
+.ttl-bar-wrap {
+  background: var(--bg3);
+  border-radius: 3px;
+  height: 4px;
+  width: 100px;
+  overflow: hidden;
+}
+
+.ttl-bar          { height: 100%; background: var(--green); border-radius: 3px; transition: width 1s linear; }
+.ttl-bar.low      { background: var(--amber); }
+.ttl-bar.critical { background: var(--red); }
